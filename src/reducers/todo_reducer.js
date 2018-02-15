@@ -10,6 +10,8 @@ export default function(state = DEFAULT_STATE, action) {
         case types.GET_ALL_TODOS:
             console.log("Get all todos", action.payload);
             return {...state, all: action.payload.data.todos};
+        case types.GET_ONE_ITEM:
+            return {...state, single: action.payload.data.todo};
         default:
             return state;
     }
